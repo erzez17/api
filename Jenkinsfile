@@ -19,7 +19,7 @@ node ("linux") {
 	}
 	stage("Deploy") {
 		sh 'docker build -t erzez/api_prod:latest .'
-		sh 'kubectl get pods'
+		sh 'hostname'
 		sh 'kubectl set image deployment/flask-dep flask=erzez/api_prod:latest'
 	}
 }
