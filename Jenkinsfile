@@ -6,7 +6,7 @@ node ("linux") {
 	}
 	stage("Test") {
 		sh 'chmod +x test.sh'
-		def var sh (script: "./test.sh", returnStdout: true)
+		def var = sh (script: "./test.sh", returnStdout: true)
 		sh 'docker rm -f test'
 		if ("${var}") {
 			echo "Testing completed successfully"
