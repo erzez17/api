@@ -19,6 +19,6 @@ node ("linux") {
 	}
 	stage("Deploy") {
 		sh 'docker build -t erzez/api_prod:latest .'
-		sh 'sudo su - ubuntu -c 'kubectl set image deployment/flask-dep flask=erzez/api_prod:latest' '
+		sh 'sudo su - ubuntu -c 'kubectl scale deployment flask-dep --replicas=5'
 	}
 }
