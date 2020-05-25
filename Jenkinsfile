@@ -19,6 +19,6 @@ node ("linux") {
 	}
 	stage("Deploy") {
 		sh 'docker build -t erzez/api_prod:latest .'
-		sh 'sudo  -S runuser -l ubuntu -c "whoami"'
+		sh 'sudo  -tS runuser -l ubuntu -c "whoami"'
 	}
 }
