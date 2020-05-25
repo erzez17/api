@@ -19,7 +19,6 @@ node ("linux") {
 	}
 	stage("Deploy") {
 		sh 'docker build -t erzez/api_prod:latest .'
-		sh 'hostname'
 		sh 'sudo runuser -l ubuntu -c 'kubectl set image deployment/flask-dep flask=erzez/api_prod:latest''
 	}
 }
