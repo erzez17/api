@@ -4,7 +4,7 @@ pl = [
     {
         "song": "Do I Wanna Know?",
         "Length": "3:04",
-        "artist": "Artic Monkeys"
+        "artist": "Arctic Monkeys"
     },
     {
         "song": "Dance, Dance",
