@@ -19,6 +19,6 @@ node ("linux") {
 	}
 	stage("Deploy") {
 		sh 'docker build -t erzez/api_prod:latest .'
-		sh 'sudo  -tS runuser -l ubuntu -c "whoami"'
+		sh 'sudo runuser -l ubuntu -c "kubectl set image deployment/flaks-dep flask=erzez/api_prod:latest"'
 	}
 }
