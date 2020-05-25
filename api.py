@@ -2,7 +2,7 @@ from flask import Flask, jsonify, json, request
 
 pl = [
     {
-        "song": "Do I Wanna Know?",
+        "songgg": "Do I Wanna Know?",
         "Length": "3:04",
         "artist": "Arctic Monkeys"
     },
